@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+</head>
+
+<body>
+
+    <script>
+        function sica(pa, r, t) {
+            var err = {};
+            try {
+                if (pa < 100 || pa > 100000) {
+                    err.message = "Principle amount is not in range: " + pa;
+                    throw err;
+                } else if (r > 12 || r < 4) {
+                    err.message = "rate is not in range: " + r;
+                    throw err;
+                } else if (t > 5 || t < 1) {
+                    err.message = "Time is not in Range: " + t;
+                    throw err;
+                } else {
+                    return (pa * r * t) / 100;
+                }
+            } catch (err) {
+                alert(err.message);
+            }
+        }
+        var pa = parseInt(prompt("Enter Amount: "));
+        var r = parseInt(prompt("ENter Rate value: "));
+        var t = parseInt(prompt("Enter Time: "));
+        console.log(sica(pa, r, t));
+    </script>
+
+
+</body>
+
+</html>

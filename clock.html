@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head></head>
+<script>
+var count=0;
+var clock=setInterval(initClock,1000);
+function initClock() {
+    var today = new Date();
+    count++;
+    if (count<10) {//value of count should be changed for increase time
+        document.getElementById('hour').innerHTML = "" + today.getHours()+":" + today.getMinutes()+":" + today.getSeconds();
+
+    } else {
+        document.getElementById('hour').innerHTML=" Interval has been Completed";
+    }
+}
+</script>
+<body>
+  <p id="hour"></p>
+</body>
+</html>

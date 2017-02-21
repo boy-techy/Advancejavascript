@@ -1,0 +1,14 @@
+<script>
+var counter;
+function foo(x){
+  var num=x;
+  counter=function(){
+    num++;
+    console.log(num);
+  }
+}
+foo(parseInt(prompt("Enter a Number: ")));
+for(var i=0;i<12;i++){
+  counter();
+}
+</script>

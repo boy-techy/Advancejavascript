@@ -1,0 +1,30 @@
+<script>
+    var final = {};
+
+    function duplicate(arr) {
+        for(var i=0;i<arr.length;i++){
+          final[arr[i]]=final[arr[i]]+1;
+        }
+        var str="";
+        for(var prop in final){
+          str+=prop;
+        }
+        console.log(str);
+    }
+
+
+    // for (var i = 1; i < arr.length; i++) {
+    //     if (arr[i] == arr[i - 1]) {
+    //         continue;
+    //     } else {
+    //         final += arr[i - 1];
+    //     }
+    // }
+    // final+=arr[i-1];
+    // console.log(final);
+
+    var arr = prompt("Enter any String:");
+    arr = arr.split("");
+    //arr.sort();
+    duplicate(arr);
+</script>

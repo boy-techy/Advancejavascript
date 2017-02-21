@@ -1,0 +1,23 @@
+<script>
+//var last=" "
+var finalString="";
+  function capitalize(text){
+    var arr=text.split(" ");
+    console.log(arr);
+    for(var i=0;i<arr.length;i++){
+      finalString+=(arr[i].charAt(0)).toUpperCase()+arr[i].slice(1)+" ";
+    }
+    // for(var i=0;i<arr.length;i++    ){
+    //   if(last==" " && arr[i]!=" "){
+    //     arr[i]=text[i].toUpperCase();
+    //     alert(arr[i]);
+    //   }
+    //   else{
+    //     alert("Else Part")
+    //     last=text[i];
+    //   }
+    // }
+    console.log(finalString);
+  }
+  capitalize(prompt("Enter String:"));
+</script>
